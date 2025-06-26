@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import RotatingText from '../Controller/RotatingText/RotatingText';
+import RotatingText from "../Controller/RotatingText/RotatingText";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   const navigation = [
     { name: "Home", href: "#" },
+    { name: "Experience", href: "#experience" },
     { name: "Tools", href: "#tools" },
     { name: "Projects", href: "#projects" },
-    { name: "Exp", href: "#exp" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -18,10 +18,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <div className="text-2xl font-bold text-indigo-400">
-          <a
-            href="#"
-            className="hover:opacity-80 transition flex items-center"
-          >
+          <a href="#" className="hover:opacity-80 transition flex items-center">
             <div className="flex items-center">
               <RotatingText
                 texts={["Arkan", "Shiba", "Mamaba", "Fullstack"]}

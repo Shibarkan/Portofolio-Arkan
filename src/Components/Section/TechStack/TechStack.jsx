@@ -114,10 +114,10 @@ export default function TechStackAnimated() {
   }, []);
 
   return (
-    <section id="tools" className="py-16 bg-neutral-950">
+    <section id="tools" className="py-16 bg-[#0d0d0d] backdrop-blur">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-10 text-white">
-          Tech Stack
+          Tools
         </h2>
 
         {/* Icon Row */}

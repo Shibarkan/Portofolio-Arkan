@@ -1,18 +1,18 @@
 import PixelTransition from "../../Controller/PixelTransition/PixelTransitio";
 import TrueFocus from "../../Controller/TrueFocus/TrueFocus";
-import './Hero.css';
+import "./Hero.css";
+
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center 
-      bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-800"
+      className="min-h-screen flex items-center justify-center bg-[#0d0d0d]"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col-reverse md:flex-row items-center gap-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col-reverse md:flex-row items-center gap-12">
         {/* Left Side */}
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white text-center md:text-left">
+          <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] font-bold text-white">
             <TrueFocus
               sentence="I'm Arkan"
               manualMode={true}
@@ -29,24 +29,36 @@ const Hero = () => {
             Let’s build something amazing together.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            {/* Tombol View Projects */}
-            <button className="relative group">
+          <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+            <button
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="relative group"
+            >
               <div className="absolute inset-0 bg-gray-100 rounded-lg translate-x-1 translate-y-1"></div>
               <div
                 className="glow relative px-6 py-3 bg-slate-900 rounded-lg border-2 border-gray-500 
-    text-white  font-semibold transition-transform select-none"
+            text-white font-semibold transition-transform select-none"
               >
                 View Projects
               </div>
             </button>
 
-            {/* Tombol Contact Me */}
-            <button className="relative group">
+            <button
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="relative group"
+            >
               <div className="absolute inset-0 bg-gray-100 rounded-lg translate-x-1 translate-y-1"></div>
               <div
                 className="glow relative px-6 py-3 bg-slate-900 rounded-lg border-2 border-gray-500 
-    text-white  font-semibold transition-transform select-none"
+            text-white font-semibold transition-transform select-none"
               >
                 Contact Me
               </div>
@@ -58,9 +70,9 @@ const Hero = () => {
         <PixelTransition
           firstContent={
             <img
-              src="https://i.pinimg.com/736x/dd/af/be/ddafbecd3f250a6dcbdb7ae4670035ec.jpg"
+              src="https://i.pinimg.com/736x/c2/86/1f/c2861f4708995fb7d5ad0aa8830e2912.jpg"
               alt="First Profile"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              className="w-full h-full object-cover"
             />
           }
           secondContent={
@@ -74,16 +86,16 @@ const Hero = () => {
               }}
             >
               <img
-                src="https://i.pinimg.com/736x/4f/9c/00/4f9c007809b1c7b86c927b0dc6ff5071.jpg"
+                src="https://i.pinimg.com/736x/b0/46/34/b04634879b715c2cd8db4145e2ac3de2.jpg"
                 alt="Second Profile"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+               className="w-full h-full object-cover"
               />
             </div>
           }
           gridSize={12}
           pixelColor="#ffffff"
           animationStepDuration={0.4}
-          className="custom-pixel-card"
+          className="w-[250px] sm:w-[300px] md:w-[400px] custom-pixel-card"
         />
       </div>
     </section>

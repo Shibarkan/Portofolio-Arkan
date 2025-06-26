@@ -71,26 +71,6 @@ const Footer = () => {
             >
               <Instagram size={22} />
             </a>
-
-            {/* Line QR */}
-            <div className="relative">
-              <button
-                onClick={() => setShowQR(!showQR)}
-                className="hover:text-green-400 transition transform hover:scale-110 hover:rotate-3"
-              >
-                <MessageCircle size={22}/>
-              </button>
-              {showQR && (
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-neutral-900 border border-neutral-700 p-3 rounded-lg shadow-xl">
-                  <img
-                    src="https://i.imgur.com/YOUR_QRCODE.png" // Ganti dengan URL QR Code Line kamu
-                    alt="Line QR"
-                    className="w-40 h-40 object-contain"
-                  />
-                </div>
-              )}
-            </div>
-
             {/* Donate */}
             <a
               href="https://saweria.co/YOURNAME"
@@ -106,7 +86,7 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="text-center text-xs text-gray-500 pb-6">
-        © {new Date().getFullYear()} ArkanDev. All rights reserved.
+        © {new Date().getFullYear()} ArkanDev. All rights reserved <a href="https://chatgpt.com/">Powered by OpenAI.</a> 
       </div>
     </footer>
   );

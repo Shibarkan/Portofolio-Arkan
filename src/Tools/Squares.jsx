@@ -1,16 +1,16 @@
 import { useRef, useEffect } from "react";
 
 const Squares = ({
-  direction = "right",
-  speed = 1,
-  borderColor = "#999",
+  direction = "up",
+  speed = 0.5,
+  borderColor = "rgba(255,255,255,0.08)",
   squareSize = 40,
-  hoverFillColor = "#222",
+  hoverFillColor = "rgba(255,255,255,0.1)",
+  blur = true,
+  gradient = true,
 }) => {
   const canvasRef = useRef(null);
   const requestRef = useRef(null);
-  const numSquaresX = useRef(0);
-  const numSquaresY = useRef(0);
   const gridOffset = useRef({ x: 0, y: 0 });
   const hoveredSquareRef = useRef(null);
 
@@ -22,8 +22,6 @@ const Squares = ({
     const resizeCanvas = () => {
       canvas.width = canvas.offsetWidth;
       canvas.height = canvas.offsetHeight;
-      numSquaresX.current = Math.ceil(canvas.width / squareSize) + 1;
-      numSquaresY.current = Math.ceil(canvas.height / squareSize) + 1;
     };
 
     window.addEventListener("resize", resizeCanvas);
@@ -31,8 +29,10 @@ const Squares = ({
 
     const drawGrid = () => {
       if (!ctx) return;
-
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const cols = Math.ceil(canvas.width / squareSize) + 1;
+      const rows = Math.ceil(canvas.height / squareSize) + 1;
 
       const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize;
       const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize;
@@ -44,8 +44,7 @@ const Squares = ({
 
           if (
             hoveredSquareRef.current &&
-            Math.floor((x - startX) / squareSize) ===
-            hoveredSquareRef.current.x &&
+            Math.floor((x - startX) / squareSize) === hoveredSquareRef.current.x &&
             Math.floor((y - startY) / squareSize) === hoveredSquareRef.current.y
           ) {
             ctx.fillStyle = hoverFillColor;
@@ -57,19 +56,22 @@ const Squares = ({
         }
       }
 
-      const gradient = ctx.createRadialGradient(
-        canvas.width / 2,
-        canvas.height / 2,
-        0,
-        canvas.width / 2,
-        canvas.height / 2,
-        Math.sqrt(canvas.width ** 2 + canvas.height ** 2) / 2
-      );
-      gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
-      gradient.addColorStop(1, "#060010");
+      // Gradient Overlay
+      if (gradient) {
+        const grd = ctx.createRadialGradient(
+          canvas.width / 2,
+          canvas.height / 2,
+          0,
+          canvas.width / 2,
+          canvas.height / 2,
+          Math.max(canvas.width, canvas.height) / 1.5
+        );
+        grd.addColorStop(0, "rgba(0, 0, 0, 0)");
+        grd.addColorStop(1, "rgba(10, 10, 10, 0.9)");
 
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
     };
 
     const updateAnimation = () => {
@@ -120,13 +122,7 @@ const Squares = ({
         (mouseY + gridOffset.current.y - startY) / squareSize
       );
 
-      if (
-        !hoveredSquareRef.current ||
-        hoveredSquareRef.current.x !== hoveredSquareX ||
-        hoveredSquareRef.current.y !== hoveredSquareY
-      ) {
-        hoveredSquareRef.current = { x: hoveredSquareX, y: hoveredSquareY };
-      }
+      hoveredSquareRef.current = { x: hoveredSquareX, y: hoveredSquareY };
     };
 
     const handleMouseLeave = () => {
@@ -148,8 +144,8 @@ const Squares = ({
   return (
     <canvas
       ref={canvasRef}
-      className="w-full h-full border-none block"
-    ></canvas>
+      className={`w-full h-full ${blur ? "blur-sm" : ""} block`}
+    />
   );
 };
 
