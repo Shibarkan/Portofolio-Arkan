@@ -1,0 +1,13 @@
+
+  .group:hover .glow {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(254, 254, 254, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.15s ease;
+    transform: translate(-4px, -4px);
+  }
+
+  .group:active .glow {
+    transform: translate( 4px,  4px) scale(0.95);
+    box-shadow: 0 0 25px rgba(238, 29, 29, 0.9), 0 0 50px rgba(255, 255, 255, 0.7);
+    transition: transform 0.05s, box-shadow 0.05s;
+  }
+

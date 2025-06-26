@@ -10,23 +10,22 @@ const Header = () => {
     { name: "Tools", href: "#tools" },
     { name: "Projects", href: "#projects" },
     { name: "Exp", href: "#exp" },
-    { name: "Testi", href: "#testi" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full backdrop-blur-md bg-white/60 dark:bg-black/30 shadow-lg z-50 border-b border-white/30 dark:border-white/10">
+    <header className="fixed top-0 left-0 w-full backdrop-blur-md bg-neutral-900/80 shadow-lg z-50 border-b border-neutral-700">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between h-16">
         {/* Logo */}
-        <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+        <div className="text-2xl font-bold text-indigo-400">
           <a
             href="#"
             className="hover:opacity-80 transition flex items-center"
           >
             <div className="flex items-center">
               <RotatingText
-                texts={["Arkan", "Shiba", "Mamaba","Fullstack"]}
-                mainClassName="px-2 sm:px-2 md:px-3 text-black rounded-lg bg-gray-400"
+                texts={["Arkan", "Shiba", "Mamaba", "Fullstack"]}
+                mainClassName="px-2 sm:px-2 md:px-3 text-black dark:text-white rounded-lg bg-gray-400 dark:bg-neutral-800"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
@@ -37,7 +36,7 @@ const Header = () => {
                 rotationInterval={2000}
               />
             </div>
-            <span className="text-neutral-800 dark:text-white">Dev</span>
+            <span className="text-white">Dev</span>
           </a>
         </div>
 
@@ -47,10 +46,10 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
-              className="relative text-neutral-700 dark:text-neutral-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition group"
+              className="relative text-neutral-200 hover:text-indigo-400 font-medium transition group"
             >
               {item.name}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-500 transition-all group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-400 transition-all group-hover:w-full"></span>
             </a>
           ))}
         </nav>
@@ -59,7 +58,7 @@ const Header = () => {
         <div className="md:hidden">
           <button
             onClick={() => setOpen(!open)}
-            className="text-neutral-700 dark:text-neutral-200 hover:text-indigo-600 dark:hover:text-indigo-400"
+            className="text-neutral-200 hover:text-indigo-400"
           >
             {open ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -78,7 +77,7 @@ const Header = () => {
               key={item.name}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="block text-neutral-700 dark:text-neutral-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition"
+              className="block text-neutral-200 hover:text-indigo-400 font-medium transition"
             >
               {item.name}
             </a>

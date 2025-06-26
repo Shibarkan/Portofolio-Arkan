@@ -6,10 +6,7 @@ const stacks = [
     name: "React",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
   },
-  {
-    name: "Vite",
-    icon: "https://vitejs.dev/logo.svg",
-  },
+  { name: "Vite", icon: "https://vitejs.dev/logo.svg" },
   {
     name: "Tailwind",
     icon: "https://cdn-icons-png.flaticon.com/128/3368/3368866.png",
@@ -67,7 +64,6 @@ export default function TechStackAnimated() {
       icon.addEventListener("mouseleave", onMouseLeave);
     });
 
-    // Clean up event listeners saat revert
     return () => {
       icons.forEach((icon) => {
         icon.removeEventListener("mouseenter", onMouseEnter);
@@ -88,30 +84,34 @@ export default function TechStackAnimated() {
 
   useEffect(() => {
     scope.current = createScope({ root: ".row" }).add(startWave);
-
     return () => {
       scope.current.revert();
     };
   }, []);
 
   return (
-    <section id="tools" className="py-16 bg-white dark:bg-neutral-950">
+    <section id="tools" className="py-16 bg-neutral-950">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10 text-neutral-800 dark:text-white">
+        <h2 className="text-3xl font-bold text-center mb-10 text-white">
           Tech Stack
         </h2>
 
-        {/* Row */}
+        {/* Icon Row */}
         <div className="flex flex-wrap justify-center gap-6 row">
           {stacks.map((stack) => (
             <div
               key={stack.name}
-              className="circle w-16 h-16 bg-white dark:bg-neutral-900 rounded-xl shadow-lg flex items-center justify-center transition"
+              className="circle w-16 h-16 
+                        bg-neutral-900 rounded-xl 
+                        shadow-lg flex items-center justify-center 
+                        border border-neutral-700 
+                        hover:scale-110 
+                        hover:shadow-[0_0_20px_#06b6d4]"
             >
               <img
                 src={stack.icon}
                 alt={stack.name}
-                className="w-10 h-10 object-contain"
+                className="w-10 h-10 object-contain filter drop-shadow-[0_0_5px_#06b6d4]"
               />
             </div>
           ))}
@@ -124,7 +124,7 @@ export default function TechStackAnimated() {
             className={`px-6 py-2 rounded-lg ${
               running
                 ? "bg-gradient-to-r from-cyan-400 to-blue-500"
-                : "bg-gradient-to-r from-gray-400 to-gray-600"
+                : "bg-gradient-to-r from-gray-600 to-gray-800"
             } text-white hover:scale-105 transition`}
           >
             {running ? "Pause Animation" : "Start Animation"}
