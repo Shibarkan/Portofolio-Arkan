@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Instagram, Heart} from "lucide-react";
+import { Github, Linkedin, Mail, Instagram, Heart, MessageCircle} from "lucide-react";
 import ScrollVelocity from "../../Tools/ScrollVelocity";
 import { useState } from "react";
 
@@ -78,11 +78,7 @@ const Footer = () => {
                 onClick={() => setShowQR(!showQR)}
                 className="hover:text-green-400 transition transform hover:scale-110 hover:rotate-3"
               >
-                <img
-                  src="https://i.pinimg.com/736x/60/d7/bd/60d7bd49ca7fa4d79ffe21053d97fcf7.jpg"
-                  alt="Line"
-                  className="w-6 h-6"
-                />
+                <MessageCircle size={22}/>
               </button>
               {showQR && (
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-neutral-900 border border-neutral-700 p-3 rounded-lg shadow-xl">

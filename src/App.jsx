@@ -3,6 +3,7 @@ import Footer from "./Components/Footer/Footer";
 import Hero from "./Components/Section/Hero/Hero";
 import TechStack from "./Components/TechStack";
 import ScrollFloat from "./Tools/ScrollFLoat";
+import Contact from "./Components/Section/Contact/Contact";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <main className="flex-grow">
           <Hero />
           <TechStack/>
+          <Contact/>
           <ScrollFloat/>
         </main>
         <Footer />
