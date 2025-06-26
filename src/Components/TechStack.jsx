@@ -35,6 +35,30 @@ const stacks = [
     name: "JavaScript",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
   },
+  {
+    name: "HTML",
+    icon: "https://cdn-icons-png.flaticon.com/128/174/174854.png",
+  },
+  {
+    name: "CSS",
+    icon: "https://cdn-icons-png.flaticon.com/128/732/732190.png",
+  },
+  {
+    name: "PY",
+    icon: "https://cdn-icons-png.flaticon.com/128/5968/5968350.png",
+  },
+  {
+    name: "JAVA",
+    icon: "https://cdn-icons-png.flaticon.com/128/5968/5968282.png",
+  },
+    {
+    name: "PHP",
+    icon: "https://cdn-icons-png.flaticon.com/128/5968/5968332.png",
+  },
+      {
+    name: "Git-Bash",
+    icon: "https://cdn-icons-png.flaticon.com/128/11518/11518876.png",
+  },
 ];
 
 export default function TechStackAnimated() {
