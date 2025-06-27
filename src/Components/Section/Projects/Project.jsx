@@ -1,4 +1,5 @@
 import { Github, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -34,95 +35,32 @@ const projects = [
     github: "#",
     demo: "#",
   },
-    {
-    id: 4,
-    title: "Kombucha Landing Page",
-    description:
-      "A clean and modern landing page for a probiotic kombucha drink. Fully responsive with attractive visual elements.",
-    image:
-      "https://i.pinimg.com/originals/07/49/5b/07495befb71e71f800711eee3d4cebc8.gif",
-    tools: ["Next.js", "Tailwind CSS", "Vercel"],
-    github: "#",
-    demo: "#",
-  },
-    {
-    id: 5,
-    title: "Kombucha Landing Page",
-    description:
-      "A clean and modern landing page for a probiotic kombucha drink. Fully responsive with attractive visual elements.",
-    image:
-      "https://i.pinimg.com/originals/07/49/5b/07495befb71e71f800711eee3d4cebc8.gif",
-    tools: ["Next.js", "Tailwind CSS", "Vercel"],
-    github: "#",
-    demo: "#",
-  },
-    {
-    id: 6,
-    title: "Kombucha Landing Page",
-    description:
-      "A clean and modern landing page for a probiotic kombucha drink. Fully responsive with attractive visual elements.",
-    image:
-      "https://i.pinimg.com/originals/07/49/5b/07495befb71e71f800711eee3d4cebc8.gif",
-    tools: ["Next.js", "Tailwind CSS", "Vercel"],
-    github: "#",
-    demo: "#",
-  },
-    {
-    id: 7,
-    title: "Kombucha Landing Page",
-    description:
-      "A clean and modern landing page for a probiotic kombucha drink. Fully responsive with attractive visual elements.",
-    image:
-      "https://i.pinimg.com/originals/07/49/5b/07495befb71e71f800711eee3d4cebc8.gif",
-    tools: ["Next.js", "Tailwind CSS", "Vercel"],
-    github: "#",
-    demo: "#",
-  },
-    {
-    id: 8,
-    title: "Kombucha Landing Page",
-    description:
-      "A clean and modern landing page for a probiotic kombucha drink. Fully responsive with attractive visual elements.",
-    image:
-      "https://i.pinimg.com/originals/07/49/5b/07495befb71e71f800711eee3d4cebc8.gif",
-    tools: ["Next.js", "Tailwind CSS", "Vercel"],
-    github: "#",
-    demo: "#",
-  },
-    {
-    id: 9,
-    title: "Kombucha Landing Page",
-    description:
-      "A clean and modern landing page for a probiotic kombucha drink. Fully responsive with attractive visual elements.",
-    image:
-      "https://i.pinimg.com/originals/07/49/5b/07495befb71e71f800711eee3d4cebc8.gif",
-    tools: ["Next.js", "Tailwind CSS", "Vercel"],
-    github: "#",
-    demo: "#",
-  },
 ];
 
 const Project = () => {
   return (
-    <section
-      id="projects"
-      className="min-h-screen bg-[#0d0d0d] py-20 px-6"
-    >
+    <section id="projects" className="min-h-screen bg-[#0d0d0d] py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-white mb-4 text-center">
+        <motion.h2
+          className="text-4xl font-bold text-white mb-4 text-center"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           My Projects
-        </h2>
-        <p className="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">
-          Here are some of the projects I've worked on, showcasing my skills in
-          frontend and backend development, UI/UX design, and modern web
-          technologies.
-        </p>
+        </motion.h2>
 
         <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <div
+          {projects.map((project, index) => (
+            <motion.div
               key={project.id}
-              className="bg-neutral-900 rounded-2xl border border-neutral-700 overflow-hidden hover:scale-[1.02] transition-transform shadow-lg group"
+              className="bg-neutral-900 rounded-2xl border border-neutral-700 overflow-hidden shadow-lg group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ scale: 1.03 }}
+              viewport={{ once: false, amount: 0.3 }}
             >
               <div className="h-52 overflow-hidden">
                 <img
@@ -138,9 +76,9 @@ const Project = () => {
                 <p className="text-neutral-400 text-sm">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2">
-                  {project.tools.map((tool, index) => (
+                  {project.tools.map((tool, i) => (
                     <span
-                      key={index}
+                      key={i}
                       className="bg-neutral-800 border border-neutral-600 px-3 py-1 text-xs rounded-full text-neutral-300"
                     >
                       {tool}
@@ -169,7 +107,7 @@ const Project = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { animate, utils, createScope } from "animejs";
+import { motion } from "framer-motion";
 
 const stacks = [
   {
@@ -134,26 +135,35 @@ export default function TechStackAnimated() {
   return (
     <section id="tools" className="py-16 bg-[#0d0d0d] backdrop-blur">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10 text-white">
+        <motion.h2
+          className="text-3xl font-bold text-center mb-10 text-white"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
           Tools
-        </h2>
+        </motion.h2>
 
         {/* Icon Row */}
         <div className="flex flex-wrap justify-center gap-6 row">
-          {stacks.map((stack) => (
-            <a
+          {stacks.map((stack, index) => (
+            <motion.a
               key={stack.name}
               href={stack.URL}
               target="_blank"
               rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
             >
               <div
                 className="circle w-16 h-16 
-        bg-neutral-900 rounded-xl 
-        shadow-lg flex items-center justify-center 
-        border border-neutral-700 
-        hover:scale-110 
-        hover:shadow-[0_0_20px_#06b6d4]"
+                        bg-neutral-900 rounded-xl 
+                        shadow-lg flex items-center justify-center 
+                        border border-neutral-700 
+                        hover:shadow-[0_0_20px_#06b6d4]"
               >
                 <img
                   src={stack.icon}
@@ -161,7 +171,7 @@ export default function TechStackAnimated() {
                   className="w-10 h-10 object-contain filter drop-shadow-[0_0_5px_#06b6d4]"
                 />
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
 
@@ -181,4 +191,4 @@ export default function TechStackAnimated() {
       </div>
     </section>
   );
-}
+};
