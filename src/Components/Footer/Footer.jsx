@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 rounded-full animate-pulse" />
             <h1 className="text-xl font-bold tracking-widest">
-              Arkan<span className="text-indigo-500">Dev</span>
+              アルカン<span className="text-indigo-500">Dev</span>
             </h1>
           </div>
           <p className="text-sm text-neutral-400">
