@@ -1,5 +1,8 @@
 import { Github, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import galleryMusic from "./assets/gallery-music.png";
+import portofolio1 from "./assets/portofolio1.png";
+import VibesValue from "./assets/VibesValue.jpg";
 
 const projects = [
   {
@@ -7,10 +10,8 @@ const projects = [
     title: "Vibes Value - Web Scrapping ",
     description:
       "A modern web app to compare product prices across multiple marketplaces like Blibli, Ebay, and Amazon.",
-    image:
-      "https://i.pinimg.com/originals/5e/30/2a/5e302aca25f9138c67b03c6defc2b105.gif",
-    tools: ["React", "Tailwind CSS", "Node.js", "Puppeteer", "javascript"
-    ],
+    image: VibesValue,
+    tools: ["Tailwind CSS", "Node.js", "Puppeteer", "javascript"],
     github: "#",
     demo: "#",
   },
@@ -18,24 +19,63 @@ const projects = [
     id: 2,
     title: "Portofolio Website",
     description:
-      "A personal portfolio website with interactive animations, responsive design, and dark mode support by default.",
-    image:
-      "https://i.pinimg.com/originals/5e/30/2a/5e302aca25f9138c67b03c6defc2b105.gif",
-    tools: ["React", "Framer Motion", "Lucide React"],
-    github: "#",
-    demo: "#",
+      "A personal portfolio website with interactive animations, responsive design.",
+    image: portofolio1,
+    tools: ["HTML", "Tailwind CSS", "javascript"],
+    github: "https://github.com/Shibarkan/arkan",
+    demo: "https://shibarkan.github.io/arkan/",
   },
   {
     id: 3,
     title: "Gallery - Music",
     description:
-      "A clean and modern landing page for a probiotic kombucha drink. Fully responsive with attractive visual elements.",
-    image:
-      "./gallery-music.png",
-    tools: ["Next.js", "Tailwind CSS", "Vercel"],
+      "Website CRUD gallery, u can upload an place them to the gallery, u can edit or delete, also u can play music.",
+    image: galleryMusic,
+    tools: ["Tailwind CSS", "HTML", "javascript"],
+    github: "https://github.com/Shibarkan/memo",
+    demo: "https://shibarkan.github.io/memo/",
+  },
+    {
+    id: 4,
+    title: "Game Simple",
+    description:
+      "3 games u can play when u boring.",
+    image: "https://shibarkan.github.io/arkan/pict/project4.png",
+    tools: ["Tailwind CSS", "HTML", "javascript"],
+    github: "https://github.com/Shibarkan/arkansGame",
+    demo: "https://shibarkan.github.io/arkansGame/",
+  },
+      {
+    id: 5,
+    title: "THR counter",
+    description:
+      "Website for counting ur money when ramadhan.",
+    image: "https://shibarkan.github.io/arkan/pict/project5.png",
+    tools: ["Tailwind CSS", "HTML", "javascript"],
+    github: "https://github.com/Shibarkan/thr-bang-thr",
+    demo: "https://shibarkan.github.io/thr-bang-thr/",
+  },
+      {
+    id: 6,
+    title: "Bazaar Web",
+    description:
+      "Website for my class when show p5, this website for order our product.",
+    image: "https://shibarkan.github.io/arkan/pict/project3.png",
+    tools: ["CSS", "HTML", "javascript"],
+    github: "#",
+    demo: "https://bazaarx7.w3spaces.com/",
+  },
+      {
+    id: 7,
+    title: "Alumni Web",
+    description:
+      "This website was build with PHP, this website have auth, and use database sql.",
+    image: "https://i.pinimg.com/474x/96/17/1c/96171c2c6906d02ed6a4840088a7f47d.jpg",
+    tools: ["Tailwind CSS", "HTML", "javascript", "PHP" , "SQL"],
     github: "#",
     demo: "#",
   },
+  
 ];
 
 const Project = () => {
@@ -57,10 +97,10 @@ const Project = () => {
             <motion.div
               key={project.id}
               className="bg-neutral-900 rounded-2xl border border-neutral-700 overflow-hidden shadow-lg group"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: false, amount: 0.3 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: false, amount: 0.3 }}
             >
               <div className="h-52 overflow-hidden">
                 <img
@@ -73,7 +113,9 @@ const Project = () => {
                 <h3 className="text-white text-2xl font-semibold">
                   {project.title}
                 </h3>
-                <p className="text-neutral-400 text-sm">{project.description}</p>
+                <p className="text-neutral-400 text-sm">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2">
                   {project.tools.map((tool, i) => (
