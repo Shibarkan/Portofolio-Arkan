@@ -9,7 +9,7 @@ const stacks = [
   { name: "Vite", icon: "https://vitejs.dev/logo.svg" },
   {
     name: "Tailwind",
-    icon: "https://cdn-icons-png.flaticon.com/128/3368/3368866.png",
+    icon: "https://www.svgrepo.com/show/333609/tailwind-css.svg",
   },
   {
     name: "Node.js",
@@ -51,11 +51,11 @@ const stacks = [
     name: "JAVA",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968282.png",
   },
-    {
+  {
     name: "PHP",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968332.png",
   },
-      {
+  {
     name: "Git-Bash",
     icon: "https://cdn-icons-png.flaticon.com/128/11518/11518876.png",
   },

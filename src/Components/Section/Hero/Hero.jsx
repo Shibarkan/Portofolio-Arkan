@@ -15,7 +15,7 @@ const Hero = () => {
           <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] font-bold text-white">
             <TrueFocus
               sentence="I'm Arkan"
-              manualMode={true}
+              manualMode={false}
               blurAmount={5}
               borderColor="red"
               animationDuration={0.4}
@@ -86,7 +86,7 @@ const Hero = () => {
               }}
             >
               <img
-                src="https://i.pinimg.com/736x/b0/46/34/b04634879b715c2cd8db4145e2ac3de2.jpg"
+                src="https://i.pinimg.com/originals/00/f4/1b/00f41be2d6d9ae7463f9a3850f6ccfa8.gif"
                 alt="Second Profile"
                className="w-full h-full object-cover"
               />

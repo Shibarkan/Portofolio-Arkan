@@ -6,6 +6,7 @@ import ScrollFloat from "./Tools/ScrollFLoat";
 import Contact from "./Components/Section/Contact/Contact";
 import Project from "./Components/Section/Projects/Project";
 import Experience from "./Components/Section/Experience/Experience";
+import About from "./Components/Section/About/About";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <main className="flex-grow">
           <Hero />
+          <About/>
           <Experience />
           <TechStack />
           <Project />

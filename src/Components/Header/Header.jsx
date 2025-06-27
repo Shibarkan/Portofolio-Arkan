@@ -7,6 +7,7 @@ const Header = () => {
 
   const navigation = [
     { name: "Home", href: "#" },
+    { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Tools", href: "#tools" },
     { name: "Projects", href: "#projects" },
@@ -22,7 +23,7 @@ const Header = () => {
             <div className="flex items-center">
               <RotatingText
                 texts={["Arkan", "Shiba", "Mamaba", "Fullstack"]}
-                mainClassName="px-2 sm:px-2 md:px-3 text-black dark:text-white rounded-lg bg-gray-400 dark:bg-neutral-800"
+                mainClassName="text-white rounded-lg"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
@@ -33,7 +34,7 @@ const Header = () => {
                 rotationInterval={2000}
               />
             </div>
-            <span className="text-white">Dev</span>
+            <span className="text-indigo-500">Dev</span>
           </a>
         </div>
 
@@ -43,10 +44,10 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
-              className="relative text-neutral-200 hover:text-indigo-400 font-medium transition group"
+              className="relative text-neutral-200 hover:text-white font-medium transition group"
             >
               {item.name}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-400 transition-all group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
             </a>
           ))}
         </nav>
