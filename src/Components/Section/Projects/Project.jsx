@@ -27,11 +27,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "Kombucha Landing Page",
+    title: "Gallery - Music",
     description:
       "A clean and modern landing page for a probiotic kombucha drink. Fully responsive with attractive visual elements.",
     image:
-      "https://i.pinimg.com/originals/5e/30/2a/5e302aca25f9138c67b03c6defc2b105.gif",
+      "./gallery-music.png",
     tools: ["Next.js", "Tailwind CSS", "Vercel"],
     github: "#",
     demo: "#",
