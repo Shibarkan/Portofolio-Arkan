@@ -4,59 +4,77 @@ import { animate, utils, createScope } from "animejs";
 const stacks = [
   {
     name: "React",
+    URL: "https://react.dev/",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
   },
-  { name: "Vite", icon: "https://vitejs.dev/logo.svg" },
+  {
+    name: "Vite",
+    URL: "https://vitejs.dev/",
+    icon: "https://vitejs.dev/logo.svg",
+  },
   {
     name: "Tailwind",
+    URL: "https://tailwindcss.com/docs",
     icon: "https://www.svgrepo.com/show/333609/tailwind-css.svg",
   },
   {
     name: "Node.js",
+    URL: "https://nodejs.org/en/docs",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "Express",
+    URL: "https://expressjs.com/en/starter/installing.html",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
   },
   {
     name: "MongoDB",
+    URL: "https://www.mongodb.com/docs/",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
   },
   {
     name: "GitHub",
+    URL: "https://docs.github.com/en",
     icon: "https://github.githubassets.com/favicons/favicon.svg",
   },
   {
     name: "Vercel",
+    URL: "https://vercel.com/docs",
     icon: "https://cdn-icons-png.flaticon.com/128/3522/3522714.png",
   },
   {
     name: "JavaScript",
+    URL: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
   },
   {
     name: "HTML",
+    URL: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     icon: "https://cdn-icons-png.flaticon.com/128/174/174854.png",
   },
   {
     name: "CSS",
+    URL: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     icon: "https://cdn-icons-png.flaticon.com/128/732/732190.png",
   },
   {
-    name: "PY",
+    name: "Python",
+    URL: "https://docs.python.org/3/",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968350.png",
   },
   {
-    name: "JAVA",
+    name: "Java",
+    URL: "https://docs.oracle.com/en/java/",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968282.png",
   },
   {
     name: "PHP",
+    URL: "https://www.php.net/docs.php",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968332.png",
   },
   {
-    name: "Git-Bash",
+    name: "Git Bash",
+    URL: "https://git-scm.com/doc",
     icon: "https://cdn-icons-png.flaticon.com/128/11518/11518876.png",
   },
 ];
@@ -123,21 +141,27 @@ export default function TechStackAnimated() {
         {/* Icon Row */}
         <div className="flex flex-wrap justify-center gap-6 row">
           {stacks.map((stack) => (
-            <div
+            <a
               key={stack.name}
-              className="circle w-16 h-16 
-                        bg-neutral-900 rounded-xl 
-                        shadow-lg flex items-center justify-center 
-                        border border-neutral-700 
-                        hover:scale-110 
-                        hover:shadow-[0_0_20px_#06b6d4]"
+              href={stack.URL}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <img
-                src={stack.icon}
-                alt={stack.name}
-                className="w-10 h-10 object-contain filter drop-shadow-[0_0_5px_#06b6d4]"
-              />
-            </div>
+              <div
+                className="circle w-16 h-16 
+        bg-neutral-900 rounded-xl 
+        shadow-lg flex items-center justify-center 
+        border border-neutral-700 
+        hover:scale-110 
+        hover:shadow-[0_0_20px_#06b6d4]"
+              >
+                <img
+                  src={stack.icon}
+                  alt={stack.name}
+                  className="w-10 h-10 object-contain filter drop-shadow-[0_0_5px_#06b6d4]"
+                />
+              </div>
+            </a>
           ))}
         </div>
 
