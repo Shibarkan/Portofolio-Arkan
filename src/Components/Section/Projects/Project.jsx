@@ -56,11 +56,10 @@ const Project = () => {
             <motion.div
               key={project.id}
               className="bg-neutral-900 rounded-2xl border border-neutral-700 overflow-hidden shadow-lg group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.03 }}
-              viewport={{ once: false, amount: 0.3 }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: false, amount: 0.3 }}
             >
               <div className="h-52 overflow-hidden">
                 <img

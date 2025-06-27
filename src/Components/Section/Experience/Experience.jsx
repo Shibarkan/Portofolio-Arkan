@@ -2,34 +2,40 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    year: "2020",
+    year: "2022",
     title: "Start Learning Coding",
     description:
-      "Began exploring web development with HTML, CSS, and JavaScript. Built mini projects to understand the basics.",
-  },
-  {
-    year: "2021",
-    title: "First Freelance Project",
-    description:
-      "Completed freelance work for clients. Focused on creating responsive and modern landing pages.",
+      "Began exploring web development with HTML, CSS, and build a mini project.",
   },
   {
     year: "2022",
-    title: "Joined Bootcamp",
+    title: "First Project",
     description:
-      "Learned React, TailwindCSS, Node.js, and advanced JavaScript. Built full-stack projects and collaborated with teams.",
+      "My first project was creating website for my class bazaar, its like food court in my school.",
   },
   {
     year: "2023",
-    title: "Open Source Contributor",
+    title: "Joined Bootcamp",
     description:
-      "Contributed to open source projects, enhancing collaboration skills and understanding scalable codebases.",
+      "I learned Java, and PHP in bootcamp with senior programming, i learned database and OOP.",
+  },
+  {
+    year: "2023",
+    title: "Fisrt Client",
+    description:
+      "My fisrt client is my friend, my friend asked me to build a website for his bussines, but only one product, so i decide to build a static website with html, tailwind, js for my friend.",
   },
   {
     year: "2024",
     title: "Frontend Developer",
     description:
       "Working with modern stacks, focusing on UI/UX design, micro-interactions, performance optimization, and accessibility.",
+  },
+  {
+    year: "2025",
+    title: "Learning Fullstack",
+    description:
+      "In this year i learn Fullstack, specially backend.",
   },
 ];
 

@@ -6,83 +6,99 @@ const stacks = [
   {
     name: "React",
     URL: "https://react.dev/",
+    percentage:"55%",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
   },
   {
     name: "Vite",
     URL: "https://vitejs.dev/",
     icon: "https://vitejs.dev/logo.svg",
+    percentage:"60%",
   },
   {
     name: "Tailwind",
     URL: "https://tailwindcss.com/docs",
     icon: "https://www.svgrepo.com/show/333609/tailwind-css.svg",
+    percentage:"70%",
   },
   {
     name: "Node.js",
     URL: "https://nodejs.org/en/docs",
+    percentage:"100%",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "Express",
     URL: "https://expressjs.com/en/starter/installing.html",
+    percentage:"10%",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
   },
   {
     name: "MongoDB",
     URL: "https://www.mongodb.com/docs/",
+    percentage:"10%",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
   },
   {
     name: "GitHub",
     URL: "https://docs.github.com/en",
+    percentage:"100%",
     icon: "https://github.githubassets.com/favicons/favicon.svg",
   },
   {
     name: "Vercel",
     URL: "https://vercel.com/docs",
+    percentage:"100%",
     icon: "https://cdn-icons-png.flaticon.com/128/3522/3522714.png",
   },
   {
     name: "JavaScript",
     URL: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    percentage:"60%",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
   },
   {
     name: "HTML",
     URL: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    percentage:"100%",
     icon: "https://cdn-icons-png.flaticon.com/128/174/174854.png",
   },
   {
     name: "CSS",
     URL: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    percentage:"100%",
     icon: "https://cdn-icons-png.flaticon.com/128/732/732190.png",
   },
   {
     name: "Python",
     URL: "https://docs.python.org/3/",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968350.png",
+    percentage:"50%",
   },
   {
     name: "Java",
     URL: "https://docs.oracle.com/en/java/",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968282.png",
+    percentage:"100%",
   },
   {
     name: "PHP",
     URL: "https://www.php.net/docs.php",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968332.png",
+    percentage:"80%",
   },
   {
     name: "Git Bash",
     URL: "https://git-scm.com/doc",
     icon: "https://cdn-icons-png.flaticon.com/128/11518/11518876.png",
+    percentage:"100%",
   },
 ];
 
 export default function TechStackAnimated() {
   const scope = useRef();
   const [running, setRunning] = useState(true);
+  const [hovered, setHovered] = useState(null);
 
   const onMouseEnter = function () {
     animate(this, { scale: 2, duration: 250 });
@@ -145,18 +161,21 @@ export default function TechStackAnimated() {
         </motion.h2>
 
         {/* Icon Row */}
-        <div className="flex flex-wrap justify-center gap-6 row">
+        <div className="flex flex-wrap justify-center gap-6 row relative">
           {stacks.map((stack, index) => (
             <motion.a
               key={stack.name}
               href={stack.URL}
               target="_blank"
               rel="noopener noreferrer"
+              onMouseEnter={() => setHovered(stack.name)}
+              onMouseLeave={() => setHovered(null)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
+              className="relative"
             >
               <div
                 className="circle w-16 h-16 
@@ -171,6 +190,18 @@ export default function TechStackAnimated() {
                   className="w-10 h-10 object-contain filter drop-shadow-[0_0_5px_#06b6d4]"
                 />
               </div>
+
+              {/* Tooltip */}
+              {hovered === stack.name && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: -20 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute -top-8 left-1/2 -translate-x-1/2 bg-neutral-800 text-white text-xs px-3 py-1 rounded-full border border-neutral-600 shadow-lg"
+                >
+                  {stack.percentage}
+                </motion.div>
+              )}
             </motion.a>
           ))}
         </div>
@@ -191,4 +222,4 @@ export default function TechStackAnimated() {
       </div>
     </section>
   );
-};
+}
