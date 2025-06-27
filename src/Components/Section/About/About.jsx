@@ -97,18 +97,28 @@ const About = () => {
             className="custom-folder"
             items={[
               <img
-                src="https://i.pinimg.com/originals/65/71/bd/6571bda97a4d6ef6570b0d4c91d1fea3.gif"
-                alt="Design"
+                src="https://i.pinimg.com/736x/39/b3/8c/39b38c29f6fece2a25c01fd5bac7c69e.jpg"
+                alt="Cycling"
                 className="w-full h-full object-cover rounded-md"
               />,
               <img
-                src="https://i.pinimg.com/originals/d0/c4/d7/d0c4d7327943ad676d2e22fa9e91c497.gif"
-                alt="Gaming"
+                src="https://i.pinimg.com/736x/e4/c4/98/e4c498d57fe6b25baba10e5241ae8214.jpg"
+                alt="badminton"
                 className="w-full h-full object-cover rounded-md"
               />,
               <img
-                src="https://i.pinimg.com/originals/22/e6/cc/22e6cc48795a2c55e7b8eed39d0c5034.gif"
-                alt="Photography"
+                src="https://i.pinimg.com/736x/43/cd/2e/43cd2e389ae00aa9ccfd060b5612394a.jpg"
+                alt="running"
+                className="w-full h-full object-cover rounded-md"
+              />,
+              <img
+                src="https://i.pinimg.com/736x/87/bc/a1/87bca1fbcc4f328fdb009b12f1261e3a.jpg"
+                alt="Music"
+                className="w-full h-full object-cover rounded-md"
+              />,
+              <img
+                src="https://i.pinimg.com/736x/ce/d4/ed/ced4ed156b8fe49fba3f33f5c0bb773f.jpg"
+                alt="my gf"
                 className="w-full h-full object-cover rounded-md"
               />,
             ]}

@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 const projects = [
   {
     id: 1,
-    title: "Tomko - Price Comparison Website",
+    title: "Vibes Value - Web Scrapping ",
     description:
-      "A modern web app to compare product prices across multiple marketplaces like Tokopedia, Shopee, and Amazon.",
+      "A modern web app to compare product prices across multiple marketplaces like Blibli, Ebay, and Amazon.",
     image:
-      "https://i.pinimg.com/originals/07/49/5b/07495befb71e71f800711eee3d4cebc8.gif",
-    tools: ["React", "Tailwind CSS", "Node.js", "Puppeteer"],
+      "https://i.pinimg.com/originals/5e/30/2a/5e302aca25f9138c67b03c6defc2b105.gif",
+    tools: ["React", "Tailwind CSS", "Node.js", "Puppeteer", "javascript"
+    ],
     github: "#",
     demo: "#",
   },
@@ -19,7 +20,7 @@ const projects = [
     description:
       "A personal portfolio website with interactive animations, responsive design, and dark mode support by default.",
     image:
-      "https://i.pinimg.com/originals/07/49/5b/07495befb71e71f800711eee3d4cebc8.gif",
+      "https://i.pinimg.com/originals/5e/30/2a/5e302aca25f9138c67b03c6defc2b105.gif",
     tools: ["React", "Framer Motion", "Lucide React"],
     github: "#",
     demo: "#",
@@ -30,7 +31,7 @@ const projects = [
     description:
       "A clean and modern landing page for a probiotic kombucha drink. Fully responsive with attractive visual elements.",
     image:
-      "https://i.pinimg.com/originals/07/49/5b/07495befb71e71f800711eee3d4cebc8.gif",
+      "https://i.pinimg.com/originals/5e/30/2a/5e302aca25f9138c67b03c6defc2b105.gif",
     tools: ["Next.js", "Tailwind CSS", "Vercel"],
     github: "#",
     demo: "#",

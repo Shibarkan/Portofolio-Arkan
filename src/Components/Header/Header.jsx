@@ -22,7 +22,7 @@ const Header = () => {
           <a href="#" className="hover:opacity-80 transition flex items-center">
             <div className="flex items-center">
               <RotatingText
-                texts={["Arkan", "Shiba", "Mamaba", "Fullstack"]}
+                texts={["Arkan", "Shiba", "Mamaba", "フルスタック"]}
                 mainClassName="text-white rounded-lg"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}

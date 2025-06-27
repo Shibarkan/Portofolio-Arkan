@@ -27,7 +27,7 @@ const Folder = ({
   items = [],
   className = "",
 }) => {
-  const maxItems = 3;
+  const maxItems = 5;
   const papers = items.slice(0, maxItems);
   while (papers.length < maxItems) {
     papers.push(null);
@@ -42,6 +42,8 @@ const Folder = ({
   const paper1 = darkenColor("#ffffff", 0.1);
   const paper2 = darkenColor("#ffffff", 0.05);
   const paper3 = "#ffffff";
+  const paper4 = "#ffffff";
+  const paper5 = "#ffffff";
 
   const handleClick = () => {
     setOpen((prev) => !prev);
@@ -84,16 +86,21 @@ const Folder = ({
     "--paper-1": paper1,
     "--paper-2": paper2,
     "--paper-3": paper3,
+    "--paper-4": paper4,
+    "--paper-5": paper5,
   };
 
   const scaleStyle = { transform: `scale(${size})` };
 
-  const getOpenTransform = (index) => {
-    if (index === 0) return "translate(-120%, -70%) rotate(-15deg)";
-    if (index === 1) return "translate(10%, -70%) rotate(15deg)";
-    if (index === 2) return "translate(-50%, -100%) rotate(5deg)";
-    return "";
-  };
+const getOpenTransform = (index) => {
+  if (index === 0) return "translate(-120%, -70%) rotate(-15deg)";
+  if (index === 1) return "translate(10%, -70%) rotate(15deg)";
+  if (index === 2) return "translate(-50%, -100%) rotate(5deg)";
+  if (index === 3) return "translate(100%, -100%) rotate(-5deg)";
+  if (index === 4) return "translate(-200%, -90%) rotate(-10deg)";
+  return "";
+};
+
 
   return (
     <div style={scaleStyle} className={className}>
@@ -116,9 +123,12 @@ const Folder = ({
           ></span>
           {papers.map((item, i) => {
             let sizeClasses = "";
-            if (i === 0) sizeClasses = open ? "w-[70%] h-[80%]" : "w-[70%] h-[80%]";
-            if (i === 1) sizeClasses = open ? "w-[80%] h-[80%]" : "w-[80%] h-[70%]";
-            if (i === 2) sizeClasses = open ? "w-[90%] h-[80%]" : "w-[90%] h-[60%]";
+              if (i === 0) sizeClasses = open ? "w-[70%] h-[80%]" : "w-[70%] h-[80%]";
+              if (i === 1) sizeClasses = open ? "w-[80%] h-[80%]" : "w-[80%] h-[70%]";
+              if (i === 2) sizeClasses = open ? "w-[90%] h-[80%]" : "w-[90%] h-[60%]";
+              if (i === 3) sizeClasses = open ? "w-[95%] h-[80%]" : "w-[95%] h-[50%]";
+              if (i === 4) sizeClasses = open ? "w-[95%] h-[80%]" : "w-[95%] h-[50%]";
+
 
             const transformStyle = open
               ? `${getOpenTransform(i)} translate(${paperOffsets[i].x}px, ${paperOffsets[i].y}px)`
@@ -135,7 +145,7 @@ const Folder = ({
                   } ${sizeClasses}`}
                 style={{
                   ...(!open ? {} : { transform: transformStyle }),
-                  backgroundColor: i === 0 ? paper1 : i === 1 ? paper2 : paper3,
+                  backgroundColor: i === 0 ? paper1 : i === 1 ? paper2 : i ===2 ? paper3 : i === 3 ? paper4 : paper5 ,
                   borderRadius: "10px",
                 }}
               >

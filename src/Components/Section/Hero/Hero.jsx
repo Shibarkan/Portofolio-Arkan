@@ -42,9 +42,11 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            A passionate Frontend Developer who loves crafting modern,
+            Student Fullstack who loves crafting modern,
             responsive, and interactive websites with a touch of creativity.
-            Let’s build something amazing together.
+            Let’s build something amazing together!.
+            <br></br>
+            始まりはここから。-shiba
           </motion.p>
 
           <motion.div
@@ -116,7 +118,7 @@ const Hero = () => {
                 }}
               >
                 <img
-                  src="https://i.pinimg.com/originals/00/f4/1b/00f41be2d6d9ae7463f9a3850f6ccfa8.gif"
+                  src="https://i.pinimg.com/736x/36/2c/b1/362cb1dc2439fd2184b61ea16e3bf52b.jpg"
                   alt="Second Profile"
                   className="w-full h-full object-cover"
                 />
