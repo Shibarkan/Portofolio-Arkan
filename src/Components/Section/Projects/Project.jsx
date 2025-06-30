@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import galleryMusic from "./assets/gallery-music.png";
 import portofolio1 from "./assets/portofolio1.png";
 import VibesValue from "./assets/VibesValue.jpg";
+import memoka from "./assets/memoka.png";
+import { memo } from "react";
 
 const projects = [
   {
@@ -74,6 +76,15 @@ const projects = [
     tools: ["Tailwind CSS", "HTML", "javascript", "PHP" , "SQL"],
     github: "#",
     demo: "#",
+  },      {
+    id: 8,
+    title: "Memoka • Lovely Gallery",
+    description:
+      "Gallery website, u can upload picture, play music, delete, and u also can join gallery's friend wit code",
+    image: memoka,
+    tools: ["Tailwind CSS", "Vite", "javascript", "Supabase" , "React"],
+    github: "https://github.com/Shibarkan/Memoka/tree/main/src",
+    demo: "https://memoka-ten.vercel.app/",
   },
   
 ];
