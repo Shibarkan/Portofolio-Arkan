@@ -73,7 +73,7 @@ const Footer = () => {
             </a>
             {/* Donate */}
             <a
-              href="https://saweria.co/YOURNAME"
+              href="https://saweria.co/shibarkan"
               target="_blank"
               className="flex items-center gap-2 hover:text-pink-500 transition transform hover:scale-110 hover:rotate-3"
             >

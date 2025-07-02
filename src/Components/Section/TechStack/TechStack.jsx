@@ -79,7 +79,7 @@ const stacks = [
     name: "Java",
     URL: "https://docs.oracle.com/en/java/",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968282.png",
-    percentage:"100%",
+    percentage:"40%",
   },
   {
     name: "PHP",
