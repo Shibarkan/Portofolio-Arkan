@@ -34,10 +34,10 @@ const stacks = [
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
   },
   {
-    name: "MongoDB",
-    URL: "https://www.mongodb.com/docs/",
+    name: "Supabase",
+    URL: "https://supabase.com/docs",
     percentage:"10%",
-    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg",
   },
   {
     name: "GitHub",
