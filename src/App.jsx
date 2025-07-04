@@ -7,6 +7,7 @@ import Contact from "./Components/Section/Contact/Contact";
 import Project from "./Components/Section/Projects/Project";
 import Experience from "./Components/Section/Experience/Experience";
 import About from "./Components/Section/About/About";
+import PriceSection from "./Components/Section/Price/Price";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Experience />
           <TechStack />
           <Project />
+          <PriceSection/>
           <Contact />
           <ScrollFloat />
         </main>
