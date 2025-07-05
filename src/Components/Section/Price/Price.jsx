@@ -51,7 +51,7 @@ export default function PriceSection() {
     const contact = e.target.contact.value;
     const msg = `Halo, saya ${name}. Saya ingin memesan paket *${selected.title}* dengan budget ${selected.price}. Kontak saya: ${contact}`;
     window.open(
-      `https://wa.me/628315690314?text=${encodeURIComponent(msg)}`
+      `https://wa.me/628315698314?text=${encodeURIComponent(msg)}`
     );
     setShowForm(false);
   };
