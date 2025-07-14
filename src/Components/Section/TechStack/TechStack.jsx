@@ -28,12 +28,6 @@ const stacks = [
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
   },
   {
-    name: "Express",
-    URL: "https://expressjs.com/en/starter/installing.html",
-    percentage:"10%",
-    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
-  },
-  {
     name: "Supabase",
     URL: "https://supabase.com/docs",
     percentage:"10%",
@@ -69,18 +63,7 @@ const stacks = [
     percentage:"100%",
     icon: "https://cdn-icons-png.flaticon.com/128/732/732190.png",
   },
-  {
-    name: "Python",
-    URL: "https://docs.python.org/3/",
-    icon: "https://cdn-icons-png.flaticon.com/128/5968/5968350.png",
-    percentage:"50%",
-  },
-  {
-    name: "Java",
-    URL: "https://docs.oracle.com/en/java/",
-    icon: "https://cdn-icons-png.flaticon.com/128/5968/5968282.png",
-    percentage:"40%",
-  },
+
   {
     name: "PHP",
     URL: "https://www.php.net/docs.php",
