@@ -48,7 +48,7 @@ const Footer = () => {
 
             {/* Linkedin */}
             <a
-              href="https://linkedin.com/Shibarkan"
+              href="https://www.linkedin.com/in/muhammad-arkan-nadhif-rafsanjani-a44b25364/"
               target="_blank"
               className="hover:text-indigo-500 transition transform hover:scale-110 hover:rotate-3"
             >
