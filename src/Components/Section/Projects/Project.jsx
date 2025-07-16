@@ -1,6 +1,6 @@
 import { Github, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
-import galleryMusic from "./assets/gallery-music.png";
+import confession from "./assets/confession.png";
 import portofolio1 from "./assets/portofolio1.png";
 import VibesValue from "./assets/VibesValue.jpg";
 import memoka from "./assets/memoka.png";
@@ -29,13 +29,13 @@ const projects = [
   },
   {
     id: 3,
-    title: "Gallery - Music",
+    title: "Confession",
     description:
-      "Website CRUD gallery, u can upload an place them to the gallery, u can edit or delete, also u can play music.",
-    image: galleryMusic,
+      "Confesstion website, for confess too your crush",
+    image: confession,
     tools: ["Tailwind CSS", "HTML", "javascript"],
-    github: "https://github.com/Shibarkan/memo",
-    demo: "https://shibarkan.github.io/memo/",
+    github: "https://github.com/Shibarkan/misteri-arkan",
+    demo: "https://shibarkan.github.io/misteri-arkan/",
   },
     {
     id: 4,
