@@ -86,7 +86,6 @@ const projects = [
     github: "https://github.com/Shibarkan/Memoka/tree/main/src",
     demo: "https://memoka-ten.vercel.app/",
   },
-  
 ];
 
 const Project = () => {
