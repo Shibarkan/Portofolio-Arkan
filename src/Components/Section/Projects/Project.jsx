@@ -1,6 +1,6 @@
 import { Github, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
-import confession from "./assets/confession.png";
+import confession from "./assets/confess.png";
 import portofolio1 from "./assets/portofolio1.png";
 import VibesValue from "./assets/VibesValue.jpg";
 import memoka from "./assets/memoka.png";
