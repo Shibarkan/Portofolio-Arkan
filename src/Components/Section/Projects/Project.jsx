@@ -4,12 +4,13 @@ import confession from "./assets/confess.png";
 import portofolio1 from "./assets/portofolio1.png";
 import VibesValue from "./assets/VibesValue.jpg";
 import memoka from "./assets/memoka.png";
+import roadfix from "./assets/roadfix.png";
 import { memo } from "react";
 
 const projects = [
   {
     id: 1,
-    title: "Vibes Value - Web Scrapping ",
+    title: "Vibes Value - Web Scrapping",
     description:
       "A modern web app to compare product prices across multiple marketplaces like Blibli, Ebay, and Amazon.",
     image: VibesValue,
@@ -85,6 +86,15 @@ const projects = [
     tools: ["Tailwind CSS", "Vite", "javascript", "Supabase" , "React"],
     github: "https://github.com/Shibarkan/Memoka/tree/main/src",
     demo: "https://memoka-ten.vercel.app/",
+  },{
+    id: 9,
+    title: "RoadFix - AI",
+    description:
+      "RoadFix AI is a Smart Mobility e-commerce platform that bridges the gap between high-tech infrastructure maintenance and autonomous robotics.",
+    image: roadfix,
+    tools: ["Tailwind CSS", "Vite", "javascript", "Supabase" , "React"],
+    github: "https://github.com/Shibarkan/RoadBot",
+    demo: "https://road-bot.vercel.app/",
   },
 ];
 
