@@ -6,7 +6,7 @@ import VibesValue from "./assets/VibesValue.jpg";
 import memoka from "./assets/memoka.png";
 import roadfix from "./assets/roadfix.png";
 import { memo } from "react";
-import kasir from "./assets/kasir.png";
+import kasir from "./assets/kasir.jpg";
 
 const projects = [
   {
