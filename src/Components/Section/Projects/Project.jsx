@@ -6,6 +6,7 @@ import VibesValue from "./assets/VibesValue.jpg";
 import memoka from "./assets/memoka.png";
 import roadfix from "./assets/roadfix.png";
 import { memo } from "react";
+import kasir from "./assets/kasir.png";
 
 const projects = [
   {
@@ -31,34 +32,31 @@ const projects = [
   {
     id: 3,
     title: "Confession",
-    description:
-      "Confesstion website, for confess too your crush",
+    description: "Confesstion website, for confess too your crush",
     image: confession,
     tools: ["Tailwind CSS", "HTML", "javascript"],
     github: "https://github.com/Shibarkan/misteri-arkan",
     demo: "https://shibarkan.github.io/misteri-arkan/",
   },
-    {
+  {
     id: 4,
     title: "Game Simple",
-    description:
-      "3 games u can play when u boring.",
+    description: "3 games u can play when u boring.",
     image: "https://shibarkan.github.io/arkan/pict/project4.png",
     tools: ["Tailwind CSS", "HTML", "javascript"],
     github: "https://github.com/Shibarkan/arkansGame",
     demo: "https://shibarkan.github.io/arkansGame/",
   },
-      {
+  {
     id: 5,
     title: "THR counter",
-    description:
-      "Website for counting ur money when ramadhan.",
+    description: "Website for counting ur money when ramadhan.",
     image: "https://shibarkan.github.io/arkan/pict/project5.png",
     tools: ["Tailwind CSS", "HTML", "javascript"],
     github: "https://github.com/Shibarkan/thr-bang-thr",
     demo: "https://shibarkan.github.io/thr-bang-thr/",
   },
-      {
+  {
     id: 6,
     title: "Bazaar Web",
     description:
@@ -68,33 +66,46 @@ const projects = [
     github: "#",
     demo: "https://bazaarx7.w3spaces.com/",
   },
-      {
+  {
     id: 7,
     title: "Alumni Web",
     description:
       "This website was build with PHP, this website have auth, and use database sql.",
-    image: "https://i.pinimg.com/474x/96/17/1c/96171c2c6906d02ed6a4840088a7f47d.jpg",
-    tools: ["Tailwind CSS", "HTML", "javascript", "PHP" , "SQL"],
+    image:
+      "https://i.pinimg.com/474x/96/17/1c/96171c2c6906d02ed6a4840088a7f47d.jpg",
+    tools: ["Tailwind CSS", "HTML", "javascript", "PHP", "SQL"],
     github: "#",
     demo: "#",
-  },      {
+  },
+  {
     id: 8,
     title: "Memoka • Lovely Gallery",
     description:
       "Gallery website, u can upload picture, play music, delete, and u also can join gallery's friend wit code",
     image: memoka,
-    tools: ["Tailwind CSS", "Vite", "javascript", "Supabase" , "React"],
+    tools: ["Tailwind CSS", "Vite", "javascript", "Supabase", "React"],
     github: "https://github.com/Shibarkan/Memoka/tree/main/src",
     demo: "https://memoka-ten.vercel.app/",
-  },{
+  },
+  {
     id: 9,
     title: "RoadFix - AI",
     description:
       "RoadFix AI is a Smart Mobility e-commerce platform that bridges the gap between high-tech infrastructure maintenance and autonomous robotics.",
     image: roadfix,
-    tools: ["Tailwind CSS", "Vite", "javascript", "Supabase" , "React"],
+    tools: ["Tailwind CSS", "Vite", "javascript", "Supabase", "React"],
     github: "https://github.com/Shibarkan/RoadBot",
     demo: "https://road-bot.vercel.app/",
+  },
+  {
+    id: 10,
+    title: "Real-Time Cashier",
+    description:
+      "A web-based cashier system featuring real-time synchronization. Whenever an item is added to the cart, the customer-facing display automatically updates instantly without requiring a page reload.",
+    image: kasir,
+    tools: ["Tailwind CSS", "Vite", "JavaScript", "Supabase", "React"],
+    github: "#",
+    demo: "#",
   },
 ];
 
